@@ -118,19 +118,15 @@
   overflow: hidden;
 }
 
-.about-area::after {
+.about-area::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 200px;
-  right: -50px;
-  bottom: -50px;
-  rotate: 340deg;
-  opacity: 1;
-  font-family: "Anton", sans-serif;
-  font-weight: 700;
-  background: url("img/Cinta_edición.svg") no-repeat center center;
-  z-index: 7;
+  width: 635px;
+  height: 213px;
+  right: 0px;
+  bottom: 0px;
+  background: url("img/cinta_1.png") no-repeat center center / contain;
+  z-index: 9;
 }
 
 .about-area,
@@ -188,19 +184,18 @@
 
 .footer-area {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .footer-area::after {
   position: absolute;
   content: "";
-  bottom: -250px;
-  left: -500px;
-  width: 1000px;
-  height: 1000px;
+  width: 317px;
+  height: 236px;
+  left: 0px;
+  bottom: 0px;
   z-index: 9;
-  background: url("img/Cinta.svg") no-repeat center center;
-  rotate: -680deg;
+  background: url("img/cinta_2.png") no-repeat center center / contain;
 }
 
 .social-area {
