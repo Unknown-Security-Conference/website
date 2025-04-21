@@ -2370,7 +2370,10 @@ blockquote {
 }
 .container.mean-container {
   position: relative;
-  left: 15px;
+  /* left: 15px; */
+}
+.mean-container .mean-bar {
+  padding: 5px 0;
 }
 .mean-container .mean-nav ul li a:hover {
   color: #ff004d;

@@ -216,6 +216,174 @@
   transition: background-color 0.3s ease;
 }
 
+@media (max-width: 767px) {
+  #scrollUp {
+    right: 25px;
+  }
+
+  .content-body {
+    max-height: 500px;
+  }
+
+  .footer-area::after {
+    content: none;
+  }
+
+  .special-wrap {
+    padding: 0 15px;
+  }
+
+  .special-offer-area {
+    padding: 100px 0;
+  }
+
+  .special-offer-area::after {
+    top: -55px;
+    left: -55px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-area::after {
+    bottom: -100px;
+    left: 15px;
+    width: 170px;
+    height: 170px;
+  }
+
+  .about-right a.btn-def,
+  .special-offer-area a.btn-def {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #ed412a;
+  }
+
+  .about-area::before {
+    content: none;
+  }
+
+  .about-left {
+    padding: 0 30px;
+  }
+
+  .about-right {
+    margin: 0 30px;
+  }
+
+  .about-right > ul li {
+    font-size: 14px;
+  }
+
+  .descp > p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .slide1-text .cap-title h1 {
+    font-size: 45px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .slide1-text .cap-title h1 .highlight {
+    font-size: 60px;
+    color: #ed412a;
+    font-weight: bold;
+  }
+
+  .slide1-text .cap-dec p {
+    margin-top: 10px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .slider-btn {
+    display: block !important;
+    text-align: center;
+    padding: 0;
+  }
+
+  .slider-container a.btn-def {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .date-address {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .down-arrow {
+    display: none;
+  }
+
+  .nivoSlider img {
+    height: 700px !important;
+    background: #0e1b30;
+  }
+
+  .logo-02 {
+    left: 15px !important;
+    width: 130px;
+  }
+
+  .about-right::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    right: -20px;
+    bottom: -10px;
+  }
+
+  .countdown {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 40px auto 0;
+    width: 300px;
+    opacity: 1;
+    /* bottom: -50px; */
+    /* right: 20px; */
+    position: static;
+  }
+
+  .countdown .title::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -35px;
+    left: -35px;
+  }
+
+  .countdown .title {
+    font-size: 21px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .timer {
+    gap: 7px;
+    margin-top: 5px;
+  }
+
+  .timer span:first-child {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .timer span:nth-child(2) {
+    font-size: 10px;
+  }
+
+  .timer span:not(:last-child):not([id]) {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .countdown {
     font-size: 20px;
