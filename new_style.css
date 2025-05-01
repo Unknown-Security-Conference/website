@@ -432,6 +432,11 @@
   margin-top: 30px !important;
 }
 
+.tickets {
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .but {
     padding: 11px 25px;
@@ -495,8 +500,13 @@
     margin-top: 100px;
   }
   .block-ticket {
-    -webkit-transform: scale(1);
-    opacity: 1;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  .tickets .col-sm-8,
+  .tickets .col-sm-4,
+  .tickets .col-sm-6 {
+    float: none !important;
   }
 }
 /* End Tickets */
