@@ -217,6 +217,9 @@
 }
 
 /* Tickets */
+.tickets {
+  background: #000;
+}
 .tickets li,
 .tickets ul {
   margin: 0;
