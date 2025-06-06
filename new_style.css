@@ -464,6 +464,7 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
   width: max-content;
+  align-items: stretch;
 }
 .speaker-card {
   border: 2px solid #1a2237;
@@ -501,12 +502,20 @@
   letter-spacing: 1px;
   color: #1a2237;
   font-size: 20px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
 }
 .speaker-role {
   color: #1a2237;
   /* color: #888; */
   margin-bottom: 15px;
   font-size: 20px;
+  min-height: 75px;
+  align-items: center;
+  justify-content: center;
 }
 .speaker-social {
   margin-top: auto;
