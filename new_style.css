@@ -135,7 +135,8 @@
   overflow: visible;
 }
 
-.what-happen-area .section-title {
+.what-happen-area .section-title,
+.speakers-section .section-title {
   border-left: 4px solid #ed412a;
   padding: 10px 0 10px 20px;
 }
@@ -440,6 +441,140 @@
   overflow: hidden;
 }
 
+/* Simple styles for speakers section */
+.speakers-section {
+  background: #faf9fa;
+  font-family: "Laconic", sans-serif;
+}
+.speakers-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0 40px 0;
+}
+.speakers-carousel-view {
+  overflow: hidden;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.speakers-carousel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  width: max-content;
+}
+.speaker-card {
+  border: 2px solid #1a2237;
+  border-radius: 18px;
+  padding: 30px 20px 20px 20px;
+  text-align: center;
+  background: #fff;
+  min-width: 200px;
+  max-width: 230px;
+  width: 100%;
+  margin: 0 16px;
+  min-height: 320px;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.speaker-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(26, 34, 55, 0.08);
+  border-color: #e74c3c;
+}
+.speaker-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  background: #f3f3f3;
+  object-fit: contain;
+  border: 20px solid #f3f3f3;
+}
+.speaker-name {
+  letter-spacing: 1px;
+  color: #1a2237;
+  font-size: 20px;
+}
+.speaker-role {
+  color: #1a2237;
+  /* color: #888; */
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.speaker-social {
+  margin-top: auto;
+}
+.speaker-social a {
+  margin: 0 8px;
+  color: #1a2237;
+  font-size: 22px;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+.speaker-social a:hover {
+  color: #e74c3c;
+}
+.chevron {
+  background: #fff;
+  border: 2px solid #1a2237;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 22px;
+  color: #1a2237;
+  box-shadow: 0 2px 8px rgba(26, 34, 55, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.chevron:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.chevron:hover:not(:disabled) {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}
+@media (max-width: 1199px) {
+  .speaker-card {
+    min-width: 180px;
+    max-width: 242px;
+  }
+}
+@media (max-width: 991px) {
+  .speaker-card {
+    min-width: 160px;
+    max-width: 260px;
+  }
+}
+@media (max-width: 767px) {
+  .speakers-carousel-wrapper {
+    padding-bottom: 20px;
+  }
+  .speaker-card {
+    min-width: 300px;
+    max-width: 395px;
+    margin: 0 8px;
+  }
+  .chevron {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .but {
     padding: 11px 25px;
@@ -512,7 +647,6 @@
     float: none !important;
   }
 }
-/* End Tickets */
 
 @media (max-width: 767px) {
   #scrollUp {
@@ -718,3 +852,78 @@
     font-size: 15px;
   }
 }
+
+/* .workshops-cards {
+  display: flex;
+  gap: 32px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.workshops-card-name {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.workshops-card-desc {
+  color: #c7cbe3;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+.workshops-btn {
+  margin-top: auto;
+}
+.workshops-card-main {
+  background: #101624 !important;
+  opacity: 1 !important;
+  z-index: 2;
+  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.32);
+  transform: scale(1.08);
+}
+.workshops-card-blur {
+  opacity: 0.6 !important;
+  filter: blur(1.5px);
+  z-index: 1;
+  transform: scale(0.95);
+}
+@media (max-width: 991px) {
+  .workshops-cards {
+    gap: 18px;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .tickets {
+    padding: 40px 0 40px 0 !important;
+  }
+  .section-title {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  .workshops-desc {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto 24px auto;
+  }
+  .workshops-cards {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .block-ticket,
+  .block-ticket.active,
+  .workshops-card-main,
+  .workshops-card-blur {
+    min-width: 80vw !important;
+    max-width: 90vw !important;
+    margin-bottom: 0 !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+} */
