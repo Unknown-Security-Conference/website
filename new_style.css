@@ -104,7 +104,7 @@
   position: absolute;
   width: 160px;
   height: 120px;
-  right: -50px;
+  right: -30px;
   bottom: -50px;
   rotate: 350deg;
   opacity: 1;
@@ -219,7 +219,7 @@
 
 /* Tickets */
 .tickets {
-  background: #000;
+  background: var(--color-primary);
 }
 .tickets li,
 .tickets ul {
@@ -252,6 +252,7 @@
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
   padding: 80px 0;
+  height: 460px;
 
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -267,7 +268,7 @@
 }
 .block-tickets.overlap {
   position: relative;
-  left: 150px;
+  /* left: 150px; */
 }
 .block-ticket:hover,
 .block-ticket.active {
@@ -387,7 +388,6 @@
 }
 
 .block-ticket li {
-  display: block !important;
   margin-bottom: 10px;
   color: #999999;
 }
@@ -424,10 +424,10 @@
 }
 
 .pt-120 {
-  padding-top: 120px !important;
+  padding-top: 50px !important;
 }
 .pb-120 {
-  padding-bottom: 120px !important;
+  padding-bottom: 50px !important;
 }
 .mb-20 {
   margin-bottom: 20px !important;
@@ -439,6 +439,49 @@
 .tickets {
   position: relative;
   overflow: hidden;
+}
+
+.tickets-title {
+  color: #fff;
+  font-family: "Anton", sans-serif;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  border-left: none;
+  padding-left: 0;
+}
+.tickets-desc {
+  color: #fff;
+  font-size: 0.96rem;
+  margin-top: 30px;
+}
+
+.block-ticket a {
+  background-color: var(--color-accent) !important;
+  border: none;
+}
+
+.block-ticket a:hover {
+  border: none;
+  outline: none;
+}
+
+.btn-ticket {
+  background-color: var(--color-accent) !important;
+  color: #fff !important;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-ticket-parent {
+  height: 60px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Simple styles for speakers section */
@@ -557,6 +600,38 @@
   color: #fff;
   border-color: #e74c3c;
 }
+
+.sponsors-section {
+  background: #fff;
+  padding: 40px 0 10px 0;
+}
+.sponsors-title {
+  font-family: "Anton", sans-serif;
+  font-size: 1.4rem;
+  color: #1a2237;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.sponsors-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 48px;
+}
+.sponsor-logo {
+  height: 54px;
+  opacity: 0.5;
+}
+@media (max-width: 600px) {
+  .sponsors-logos {
+    gap: 24px 16px;
+  }
+  .sponsor-logo {
+    height: 38px;
+  }
+}
+
 @media (max-width: 1199px) {
   .speaker-card {
     min-width: 180px;
@@ -567,6 +642,9 @@
   .speaker-card {
     min-width: 160px;
     max-width: 260px;
+  }
+  .about-area::after {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -613,6 +691,11 @@
   .sub-title-0 {
     font-size: 22px;
   }
+  .block-ticket {
+    -webkit-transform: scale(1) !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .vertical-align {
@@ -621,14 +704,15 @@
   .block-tickets li {
     display: block;
   }
-  .block-tickets.overlap {
+  /* .block-tickets.overlap {
     left: auto;
     margin-bottom: 20px;
     margin-top: 100px;
-  }
+  } */
   .block-ticket {
-    -webkit-transform: scale(1);
-    opacity: 1;
+    -webkit-transform: scale(1) !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -641,11 +725,11 @@
   .but {
     padding: 11px 20px;
   }
-  .block-tickets.overlap {
+  /* .block-tickets.overlap {
     left: auto;
     margin-bottom: 20px;
     margin-top: 100px;
-  }
+  } */
   .block-ticket {
     transform: scale(1) !important;
     opacity: 1 !important;
@@ -686,10 +770,11 @@
   }
 
   .about-area::after {
-    bottom: -100px;
+    /* bottom: -100px;
     left: 15px;
     width: 170px;
-    height: 170px;
+    height: 170px; */
+    display: none;
   }
 
   .about-right a.btn-def,
@@ -861,78 +946,3 @@
     font-size: 15px;
   }
 }
-
-/* .workshops-cards {
-  display: flex;
-  gap: 32px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.workshops-card-name {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 14px;
-  letter-spacing: 1px;
-  margin-top: 10px;
-}
-.workshops-card-desc {
-  color: #c7cbe3;
-  font-size: 1rem;
-  margin-bottom: 28px;
-}
-.workshops-btn {
-  margin-top: auto;
-}
-.workshops-card-main {
-  background: #101624 !important;
-  opacity: 1 !important;
-  z-index: 2;
-  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.32);
-  transform: scale(1.08);
-}
-.workshops-card-blur {
-  opacity: 0.6 !important;
-  filter: blur(1.5px);
-  z-index: 1;
-  transform: scale(0.95);
-}
-@media (max-width: 991px) {
-  .workshops-cards {
-    gap: 18px;
-  }
-  .section-title {
-    font-size: 36px;
-  }
-}
-@media (max-width: 767px) {
-  .tickets {
-    padding: 40px 0 40px 0 !important;
-  }
-  .section-title {
-    font-size: 2.1rem;
-    text-align: center;
-  }
-  .workshops-desc {
-    font-size: 1rem;
-    text-align: center;
-    margin: 0 auto 24px auto;
-  }
-  .workshops-cards {
-    flex-direction: column;
-    gap: 0;
-    align-items: center;
-  }
-  .block-ticket,
-  .block-ticket.active,
-  .workshops-card-main,
-  .workshops-card-blur {
-    min-width: 80vw !important;
-    max-width: 90vw !important;
-    margin-bottom: 0 !important;
-    transform: none !important;
-    filter: none !important;
-    opacity: 1 !important;
-  }
-} */
