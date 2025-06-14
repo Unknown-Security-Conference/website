@@ -418,9 +418,9 @@
         <div class="row">
           <div class="col-lg-8 col-12">
             <div class="workshop-content">
-              <h1 class="workshop-title">CLOUD SECURITY - THE BLUE TEAM WAY</h1>
+              <h1 class="workshop-title">TALLER PRÁCTICO DE SEGURIDAD OFENSIVA EN IOT CON MININO</h1>
               <div class="workshop-desc">
-                Este taller intensivo te permitirá aplicar técnicas de Blue Team para detectar amenazas reales, mejorar la postura de seguridad en la nube y responder a incidentes con eficacia. Aprenderás a usar inteligencia de amenazas, hacer hunting activo y levantar detecciones efectivas. Además, pondrás en práctica tus conocimientos en un CTF interactivo. Una experiencia completa y aplicable a cualquier entorno cloud.
+                Este taller práctico se enfoca en seguridad ofensiva en IoT usando Minino, una herramienta portátil para analizar redes Zigbee, WiFi, Bluetooth, Thread y GPS. Los participantes aprenderán técnicas como sniffing, inyección de comandos, spoofing y wardriving en un entorno seguro. A través de ejercicios reales, explorarán vulnerabilidades comunes en dispositivos conectados. Es ideal para quienes desean iniciarse o profundizar en hacking ético aplicado a IoT.
               </div>
 
               <div class="section-title">
@@ -429,19 +429,22 @@
               </div>
               <ul class="workshop-list">
                 <li>
-                  · Aplicar técnicas de Blue Team como Threat Intelligence, Hunting y Detección para reforzar estrategias DevSecOps.
+                  · Analizar redes y dispositivos IoT que utilizan protocolos como Zigbee, WiFi, Bluetooth, Thread y GPS.
                 </li>
                 <li>
-                  · Priorizar vulnerabilidades según contexto real, analizando TTPs e IoCs alineados al stack, industria y región..
+                  · Aplicar técnicas de sniffing para interceptar comunicaciones inalámbricas en dispositivos conectados.
                 </li>
                 <li>
-                  · Diseñar estrategias de detección efectivas sin comprometer el time to market y aprovechando registros de auditoría.
+                  · Ejecutar ataques de inyección de comandos sobre dispositivos vulnerables en un entorno controlado.
                 </li>
                 <li>
-                  · Ejecutar hunts activos para validar visibilidad y detectar compromisos pasados en entornos cloud.
+                  · Realizar spoofing para suplantar identidades de dispositivos IoT y estudiar su comportamiento.
                 </li>
                 <li>
-                  · Practicar respuesta a incidentes mediante ejercicios tácticos y un CTF interactivo contra un Red Team.
+                  · Practicar wardriving multiprotocolo para detectar y mapear dispositivos en diferentes tecnologías inalámbricas.
+                </li>
+                <li>
+                  · Explorar vulnerabilidades comunes en IoT mediante ejercicios prácticos con la herramienta Minino.
                 </li>
               </ul>
 
@@ -451,25 +454,34 @@
               </div>
               <ul class="workshop-temario-list">
                 <li>
-                  <span class="temario-num">1</span>Introducción
+                  <span class="temario-num">1</span>Introducción a Minino y conceptos claves.
                 </li>
                 <li>
-                  <span class="temario-num">2</span>Security Detection
+                  <span class="temario-num">2</span>Protocolos soportados por Minino + instalación de herramientas.
                 </li>
                 <li>
-                  <span class="temario-num">3</span>Cyber Threat Intelligence
+                  <span class="temario-num">3</span>Introducción a antenas: tipos, usos y aplicaciones prácticas.
                 </li>
                 <li>
-                  <span class="temario-num">4</span>Threat Hunting
+                  <span class="temario-num">4</span>Zigbee: teoría y práctica de sniffing e inyección.
                 </li>
                 <li>
-                  <span class="temario-num">5</span>Incident Response
+                  <span class="temario-num">5</span>Wi-Fi: Deauth, SSID Spam, Analyzer y Evil Portal.
                 </li>
                 <li>
-                  <span class="temario-num">6</span>Laboratorio Práctico (Parte 2)
+                  <span class="temario-num">6</span>Bluetooth: Trackers, Spammer, ADB Scanner.
                 </li>
                 <li>
-                  <span class="temario-num">7</span>Avances y Futuro
+                  <span class="temario-num">7</span>Wardriving + GPS: Wi-Fi, Zigbee, Thread, ubicación y velocidad.
+                </li>
+                <li>
+                  <span class="temario-num">8</span>Thread: historia, diseño, sniffing y mensajes.
+                </li>
+                <li>
+                  <span class="temario-num">9</span>Cierre práctico: mini retos, preguntas, demostraciones finales.
+                </li>
+                <li>
+                  <span class="temario-num">10</span>(Opcional) GPIOs, Serial e I2C o Tu primer Script + App.
                 </li>
               </ul>
 
@@ -479,13 +491,25 @@
               </div>
               <ul class="workshop-list">
                 <li>
-                  · Conocimientos basicos de Linux.
+                  · Laptop con Linux, Windows o macOS instalado. <br>
                 </li>
                 <li>
-                  · Conocimientos basicos de Networking.
+                  · Acceso a consola de comandos (bash, zsh o pwsh).
                 </li>
                 <li>
-                  · Laptop con conexión a internet para poder realizar los ejercicios y que permita instalar alguna herramienta.
+                  · Al menos 2 GB libres de almacenamiento. 
+                </li>
+                <li>
+                  · Última versión de Wireshark instalada.
+                </li>
+                <li>
+                  · Última versión de Python instalada.
+                </li>
+                <li>
+                  · Git o gestor de versiones equivalente instalado.
+                </li>
+                <li>
+                  · Recomendado: Conocimientos básicos de redes y protocolos inalámbricos
                 </li>
               </ul>
             </div>
@@ -499,7 +523,7 @@
                   <div class="col-6 col-lg-12">
                     <div class="workshop-speaker-card-imgbox mb-3">
                       <img
-                        src="photos/santiagoAbastante.png"
+                        src="photos/SabasWero.png"
                         alt="Santiago Abastante"
                         class="workshop-speaker-card-img"
                       />
@@ -509,18 +533,24 @@
                   <!-- Names -->
                   <div class="col-6 col-lg-12 pt-4 pt-lg-0">
                     <div class="workshop-speaker-card-name">
-                      Santiago Abastante
+                      Andrés Sabas y Eduardo Contreras
                     </div>
                     <div class="workshop-speaker-card-role">
                       
                     </div>
-                    <div class="workshop-speaker-card-company">Senior Security Cloud Engineer - Solidarity Labs</div>
+                    <div class="workshop-speaker-card-company">Ingenieros Electronicos y fundadores de Electronic Cats</div>
                     <div class="workshop-speaker-card-social mt-2">
-                      <!--<a href="https://x.com/Netxing" target="_blank"><i class="zmdi zmdi-twitter"></i></a>-->
-                      <a href="https://www.instagram.com/santi.abastante?igsh=MWZ3Ym4wNjhmOXI3ZA==" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
-                      <a href="https://www.linkedin.com/in/sabastante/" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
+                      <a href="https://x.com/electronicats" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
+                      <a href="https://www.instagram.com/electroniccats/" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
+                      <a href="https://www.linkedin.com/company/electroniccats/" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
                     </div>
                   </div>
+
+
+
+                  
+
+
                 </div>
               </div>
 
