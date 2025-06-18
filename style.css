@@ -1116,13 +1116,33 @@ a.btn-def.bnt-2.big {
     cover;
   padding: 40px 0;
 }
+.brand-area-sponsor {
+  background: rgb(255, 255, 255);
+  padding: 40px 0;
+  max-width: 100%;
+  height: 233px;
+}
 .single-brand {
-  padding: 60px 0;
+  padding: 50px 0;
   text-align: center;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+  min-height: 150px;
 }
-.active .single-brand {
+
+.single-brand img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.single-brand img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+/* .active .single-brand {
   border-right: 1px solid #eee;
-}
+} */
 .bg-overlay {
   position: relative;
   z-index: 1;
@@ -2496,4 +2516,29 @@ blockquote {
   background: #fff none repeat scroll 0 0;
   border-color: #ff004d;
   color: #ff004d;
+}
+
+.flex-gap-40 {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* aplica separación tanto horizontal como vertical */
+  /* O si quieres solo horizontal: */
+  /* column-gap: 40px; */
+}
+
+.flex-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  height: fit-content;
+  width: fit-content;
+}
+
+.flex-img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
 }
