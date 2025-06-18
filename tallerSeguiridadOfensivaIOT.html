@@ -108,7 +108,9 @@
         color: var(--color-primary);
         font-size: 1rem;
         margin-bottom: 8px;
-        list-style: none;
+        list-style-type: disc !important;
+        list-style-position: outside !important;
+        display: list-item !important;
       }
       .workshop-temario-list {
         margin-left: 0px;
@@ -150,8 +152,9 @@
         padding: 0px;
         text-align: left;
       }
-      .workshop-speaker-card-imgbox {
-        background: #e5e6e9;
+        .workshop-speaker-card-imgbox {
+        
+        background: #ffffff;
         border-radius: 12px;
         aspect-ratio: 1 / 0.7;
         display: flex;
@@ -161,8 +164,10 @@
       }
 
       .workshop-speaker-card-img {
-        width: 150px;
-        height: 150px;
+ /*      width: 150px;
+        height: 150px; */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-radius: 0;
         background: none;
@@ -173,24 +178,27 @@
         font-weight: 600;
         font-size: 1.4rem;
         margin-bottom: 0px;
+        text-align: center;
       }
 
       .workshop-speaker-card-role {
         font-size: 1.2rem;
         margin-bottom: 0px;
+         text-align: center;
       }
 
       .workshop-speaker-card-company {
         font-size: 1.2rem;
         margin-bottom: 8px;
+         text-align: center;
       }
 
       .workshop-speaker-card-social {
         display: flex;
         gap: 15px;
         margin-top: 8px;
+        justify-content: center; 
       }
-
       .workshop-speaker-card-social a {
         color: #1a2237;
         font-size: 1.5rem;
@@ -418,7 +426,7 @@
         <div class="row">
           <div class="col-lg-8 col-12">
             <div class="workshop-content">
-              <h1 class="workshop-title">TALLER PRÁCTICO DE SEGURIDAD OFENSIVA EN IOT CON MININO</h1>
+              <h1 class="workshop-title">SEGURIDAD OFENSIVA EN IOT CON MININO</h1>
               <div class="workshop-desc">
                 Este taller práctico se enfoca en seguridad ofensiva en IoT usando Minino, una herramienta portátil para analizar redes Zigbee, WiFi, Bluetooth, Thread y GPS. Los participantes aprenderán técnicas como sniffing, inyección de comandos, spoofing y wardriving en un entorno seguro. A través de ejercicios reales, explorarán vulnerabilidades comunes en dispositivos conectados. Es ideal para quienes desean iniciarse o profundizar en hacking ético aplicado a IoT.
               </div>
@@ -428,24 +436,12 @@
                 ¿QUÉ APRENDERÁS?
               </div>
               <ul class="workshop-list">
-                <li>
-                  · Analizar redes y dispositivos IoT que utilizan protocolos como Zigbee, WiFi, Bluetooth, Thread y GPS.
-                </li>
-                <li>
-                  · Aplicar técnicas de sniffing para interceptar comunicaciones inalámbricas en dispositivos conectados.
-                </li>
-                <li>
-                  · Ejecutar ataques de inyección de comandos sobre dispositivos vulnerables en un entorno controlado.
-                </li>
-                <li>
-                  · Realizar spoofing para suplantar identidades de dispositivos IoT y estudiar su comportamiento.
-                </li>
-                <li>
-                  · Practicar wardriving multiprotocolo para detectar y mapear dispositivos en diferentes tecnologías inalámbricas.
-                </li>
-                <li>
-                  · Explorar vulnerabilidades comunes en IoT mediante ejercicios prácticos con la herramienta Minino.
-                </li>
+                <li>Analizar redes y dispositivos IoT que utilizan protocolos como Zigbee, WiFi, Bluetooth, Thread y GPS.</li>
+                <li>Aplicar técnicas de sniffing para interceptar comunicaciones inalámbricas en dispositivos conectados.</li>
+                <li>Ejecutar ataques de inyección de comandos sobre dispositivos vulnerables en un entorno controlado.</li>
+                <li>Realizar spoofing para suplantar identidades de dispositivos IoT y estudiar su comportamiento.</li>
+                <li>Practicar wardriving multiprotocolo para detectar y mapear dispositivos en diferentes tecnologías inalámbricas.</li>
+                <li>Explorar vulnerabilidades comunes en IoT mediante ejercicios prácticos con la herramienta Minino.</li>
               </ul>
 
               <div class="section-title">
@@ -490,27 +486,13 @@
                 PRE-REQUISITOS
               </div>
               <ul class="workshop-list">
-                <li>
-                  · Laptop con Linux, Windows o macOS instalado. <br>
-                </li>
-                <li>
-                  · Acceso a consola de comandos (bash, zsh o pwsh).
-                </li>
-                <li>
-                  · Al menos 2 GB libres de almacenamiento. 
-                </li>
-                <li>
-                  · Última versión de Wireshark instalada.
-                </li>
-                <li>
-                  · Última versión de Python instalada.
-                </li>
-                <li>
-                  · Git o gestor de versiones equivalente instalado.
-                </li>
-                <li>
-                  · Recomendado: Conocimientos básicos de redes y protocolos inalámbricos
-                </li>
+                <li>Laptop con Linux, Windows o macOS instalado.</li>
+                <li>Acceso a consola de comandos (bash, zsh o pwsh)</li>
+                <li>Al menos 2 GB libres de almacenamiento.</li>
+                <li>Última versión de Wireshark instalada.</li>
+                <li>Última versión de Python instalada.</li>
+                <li>Git o gestor de versiones equivalente instalado.</li>
+                <li>Recomendado: Conocimientos básicos de redes y protocolos inalámbricos</li>
               </ul>
             </div>
           </div>
@@ -523,8 +505,8 @@
                   <div class="col-6 col-lg-12">
                     <div class="workshop-speaker-card-imgbox mb-3">
                       <img
-                        src="photos/SabasWero.png"
-                        alt="Santiago Abastante"
+                        src="photos/electronicats.svg"
+                        alt="Andrés Sabas y Eduardo Contreras"
                         class="workshop-speaker-card-img"
                       />
                     </div>
@@ -538,12 +520,14 @@
                     <div class="workshop-speaker-card-role">
                       
                     </div>
-                    <div class="workshop-speaker-card-company">Ingenieros Electronicos y fundadores de Electronic Cats</div>
+                    <div class="workshop-speaker-card-company">Fundadores de Electronic Cats</div>
                     <div class="workshop-speaker-card-social mt-2">
                       <a href="https://x.com/electronicats" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
                       <a href="https://www.instagram.com/electroniccats/" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
                       <a href="https://www.linkedin.com/company/electroniccats/" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
                     </div>
+
+                    
                   </div>
 
 

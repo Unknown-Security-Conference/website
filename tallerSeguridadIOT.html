@@ -108,7 +108,9 @@
         color: var(--color-primary);
         font-size: 1rem;
         margin-bottom: 8px;
-        list-style: none;
+        list-style-type: disc !important;
+        list-style-position: outside !important;
+        display: list-item !important;
       }
       .workshop-temario-list {
         margin-left: 0px;
@@ -150,8 +152,9 @@
         padding: 0px;
         text-align: left;
       }
-      .workshop-speaker-card-imgbox {
-        background: #e5e6e9;
+        .workshop-speaker-card-imgbox {
+        
+        background: #ffffff;
         border-radius: 12px;
         aspect-ratio: 1 / 0.7;
         display: flex;
@@ -161,8 +164,10 @@
       }
 
       .workshop-speaker-card-img {
-        width: 150px;
-        height: 150px;
+ /*      width: 150px;
+        height: 150px; */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-radius: 0;
         background: none;
@@ -173,24 +178,27 @@
         font-weight: 600;
         font-size: 1.4rem;
         margin-bottom: 0px;
+        text-align: center;
       }
 
       .workshop-speaker-card-role {
         font-size: 1.2rem;
         margin-bottom: 0px;
+         text-align: center;
       }
 
       .workshop-speaker-card-company {
         font-size: 1.2rem;
         margin-bottom: 8px;
+         text-align: center;
       }
 
       .workshop-speaker-card-social {
         display: flex;
         gap: 15px;
         margin-top: 8px;
+        justify-content: center; 
       }
-
       .workshop-speaker-card-social a {
         color: #1a2237;
         font-size: 1.5rem;
@@ -427,26 +435,14 @@
                 <span class="circle me-2"></span>
                 ¿QUÉ APRENDERÁS?
               </div>
-              <ul class="workshop-list">
-                <li>
-                  · Identificar vulnerabilidades en interfaces web, servicios ocultos y configuraciones por defecto en dispositivos IoT.
-                </li>
-                <li>
-                  · Aprender técnicas de hardware hacking como el uso de analizadores lógicos y acceso a puertos de depuración.
-                </li>
-                <li>
-                  · Comprender vectores de ataque comunes en redes IoT, como contraseñas débiles y servicios expuestos.
-                </li>
-                <li>
-                  · Utilizar herramientas profesionales como escáneres de red, terminales seriales y navegadores para análisis de seguridad.
-                </li>
-                <li>
-                  · Resolver desafíos tipo Capture The Flag (CTF) que simulan escenarios reales de explotación de dispositivos IoT.
-                </li>
-                <li>
-                  · Conocer metodologías básicas de mitigación de riesgos en IoT, incluyendo buenas prácticas de configuración 
-                </li>
-              </ul>
+                <ul class="workshop-list">
+                  <li>Identificar vulnerabilidades en interfaces web, servicios ocultos y configuraciones por defecto en dispositivos IoT.</li>
+                  <li>Aprender técnicas de hardware hacking como el uso de analizadores lógicos y acceso a puertos de depuración.</li>
+                  <li>Comprender vectores de ataque comunes en redes IoT, como contraseñas débiles y servicios expuestos.</li>
+                  <li>Utilizar herramientas profesionales como escáneres de red, terminales seriales y navegadores para análisis de seguridad.</li>
+                  <li>Resolver desafíos tipo Capture The Flag (CTF) que simulan escenarios reales de explotación de dispositivos IoT.</li>
+                  <li>Conocer metodologías básicas de mitigación de riesgos en IoT, incluyendo buenas prácticas de configuración.</li>
+                </ul>
 
               <div class="section-title">
                 <span class="circle me-2"></span>
@@ -474,15 +470,10 @@
                 <span class="circle me-2"></span>
                 PRE-REQUISITOS
               </div>
-              <ul class="workshop-list">
-                <li>
-                  · Habilidades básicas de comptuación (instalacion de software y uso de navegador)
-                </li>
-
-                <li>
-                  · Entusiasmo en aprender y capacidad para seguir instrucciones.
-                </li>
-              </ul>
+                <ul class="workshop-list">
+                  <li>Habilidades básicas de computación (instalación de software y uso de navegador).</li>
+                  <li>Entusiasmo en aprender y capacidad para seguir instrucciones.</li>
+                </ul> 
             </div>
           </div>
 
@@ -494,7 +485,7 @@
                   <div class="col-6 col-lg-12">
                     <div class="workshop-speaker-card-imgbox mb-3">
                       <img
-                        src="photos/pieroPicasso.jpg"
+                        src="photos/pieroPicasso.svg"
                         alt="Piero Picasso"
                         class="workshop-speaker-card-img"
                       />
@@ -511,7 +502,6 @@
                     </div>
                     <div class="workshop-speaker-card-company">Device Penetration Testing Lead - CISCO</div>
                     <div class="workshop-speaker-card-social mt-2">
-                      <!--<a href="https://x.com/Netxing" target="_blank"><i class="zmdi zmdi-twitter"></i></a>-->
                       <a href="https://www.linkedin.com/in/piero-picasso" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
                     </div>
                   </div>

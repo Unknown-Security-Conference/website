@@ -108,7 +108,9 @@
         color: var(--color-primary);
         font-size: 1rem;
         margin-bottom: 8px;
-        list-style: none;
+        list-style-type: disc !important;
+        list-style-position: outside !important;
+        display: list-item !important;
       }
       .workshop-temario-list {
         margin-left: 0px;
@@ -151,7 +153,7 @@
         text-align: left;
       }
       .workshop-speaker-card-imgbox {
-        background: #e5e6e9;
+        background: #ffffff;
         border-radius: 12px;
         aspect-ratio: 1 / 0.7;
         display: flex;
@@ -161,8 +163,10 @@
       }
 
       .workshop-speaker-card-img {
-        width: 150px;
-        height: 150px;
+ /*      width: 150px;
+        height: 150px; */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-radius: 0;
         background: none;
@@ -173,22 +177,26 @@
         font-weight: 600;
         font-size: 1.4rem;
         margin-bottom: 0px;
+        text-align: center;
       }
 
       .workshop-speaker-card-role {
         font-size: 1.2rem;
         margin-bottom: 0px;
+         text-align: center;
       }
 
       .workshop-speaker-card-company {
         font-size: 1.2rem;
         margin-bottom: 8px;
+         text-align: center;
       }
 
       .workshop-speaker-card-social {
         display: flex;
         gap: 15px;
         margin-top: 8px;
+        justify-content: center; 
       }
 
       .workshop-speaker-card-social a {
@@ -427,23 +435,13 @@
                 <span class="circle me-2"></span>
                 ¿QUÉ APRENDERÁS?
               </div>
-              <ul class="workshop-list">
-                <li>
-                  · Aplicar técnicas de Blue Team como Threat Intelligence, Hunting y Detección para reforzar estrategias DevSecOps.
-                </li>
-                <li>
-                  · Priorizar vulnerabilidades según contexto real, analizando TTPs e IoCs alineados al stack, industria y región..
-                </li>
-                <li>
-                  · Diseñar estrategias de detección efectivas sin comprometer el time to market y aprovechando registros de auditoría.
-                </li>
-                <li>
-                  · Ejecutar hunts activos para validar visibilidad y detectar compromisos pasados en entornos cloud.
-                </li>
-                <li>
-                  · Practicar respuesta a incidentes mediante ejercicios tácticos y un CTF interactivo contra un Red Team.
-                </li>
-              </ul>
+                <ul class="workshop-list">
+                  <li>Aplicar técnicas de Blue Team como Threat Intelligence, Hunting y Detección para reforzar estrategias DevSecOps.</li>
+                  <li>Priorizar vulnerabilidades según contexto real, analizando TTPs e IoCs alineados al stack, industria y región.</li>
+                  <li>Diseñar estrategias de detección efectivas sin comprometer el time to market y aprovechando registros de auditoría.</li>
+                  <li>Ejecutar hunts activos para validar visibilidad y detectar compromisos pasados en entornos cloud.</li>
+                  <li>Practicar respuesta a incidentes mediante ejercicios tácticos y un CTF interactivo contra un Red Team.</li>
+                </ul>
 
               <div class="section-title">
                 <span class="circle me-2"></span>
@@ -478,14 +476,9 @@
                 PRE-REQUISITOS
               </div>
               <ul class="workshop-list">
-                <li>
-                  · Conocimientos basicos de Linux y Networking
-                </li>
-
-                <li>
-                  · Laptop con conexión a internet para poder realizar los ejercicios y que permita instalar alguna herramienta.
-                </li>
-              </ul>
+                                <li>Conocimientos básicos de Linux y Networking.</li>
+                                                <li>Laptop con conexión a internet para poder realizar los ejercicios y que permita instalar alguna herramienta.</li>
+                                                              </ul>
             </div>
           </div>
 
@@ -512,7 +505,7 @@
                     <div class="workshop-speaker-card-role">
                       
                     </div>
-                    <div class="workshop-speaker-card-company">Senior Security Cloud Engineer - Solidarity Labs</div>
+                    <div class="workshop-speaker-card-company">Senior Security Cloud Engineer <br> Solidarity Labs</div>
                     <div class="workshop-speaker-card-social mt-2">
                       <!--<a href="https://x.com/Netxing" target="_blank"><i class="zmdi zmdi-twitter"></i></a>-->
                       <a href="https://www.instagram.com/santi.abastante?igsh=MWZ3Ym4wNjhmOXI3ZA==" target="_blank"><i class="zmdi zmdi-instagram"></i></a>

@@ -108,7 +108,9 @@
         color: var(--color-primary);
         font-size: 1rem;
         margin-bottom: 8px;
-        list-style: none;
+        list-style-type: disc !important;
+        list-style-position: outside !important;
+        display: list-item !important;
       }
       .workshop-temario-list {
         margin-left: 0px;
@@ -151,7 +153,8 @@
         text-align: left;
       }
       .workshop-speaker-card-imgbox {
-        background: #e5e6e9;
+        
+        background: #ffffff;
         border-radius: 12px;
         aspect-ratio: 1 / 0.7;
         display: flex;
@@ -161,8 +164,10 @@
       }
 
       .workshop-speaker-card-img {
-        width: 150px;
-        height: 150px;
+ /*      width: 150px;
+        height: 150px; */
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-radius: 0;
         background: none;
@@ -173,23 +178,28 @@
         font-weight: 600;
         font-size: 1.4rem;
         margin-bottom: 0px;
+        text-align: center;
       }
 
       .workshop-speaker-card-role {
         font-size: 1.2rem;
         margin-bottom: 0px;
+         text-align: center;
       }
 
       .workshop-speaker-card-company {
         font-size: 1.2rem;
         margin-bottom: 8px;
+         text-align: center;
       }
 
       .workshop-speaker-card-social {
         display: flex;
         gap: 15px;
         margin-top: 8px;
+        justify-content: center; 
       }
+
 
       .workshop-speaker-card-social a {
         color: #1a2237;
@@ -427,27 +437,14 @@
                 <span class="circle me-2"></span>
                 ¿QUÉ APRENDERÁS?
               </div>
-              <ul class="workshop-list">
-                <li>
-                  · Diseñar arquitecturas de agentes inteligentes aplicadas a la ciberseguridad.
-                </li>
-                <li>
-                  · Automatizar tareas como la investigación, el análisis y la generación de alertas de seguridad.
-                </li>
-                <li>
-                  · Practicar con flujos completos donde múltiples agentes colaboran para resolver desafíos reales.
-                </li>
-                <li>
-                  · Integrar plataformas de código abierto y privadas en soluciones escalables y funcionales.
-                </li>
-                <li>
-                  · Utilizar entornos como Google Colab, Hugging Face y servicios en la nube como AWS.
-                </li>
-                <li>
-                  · Explorar conceptos esenciales como agentes, memoria, planificación, colaboración y testing.
-                </li>
-              </ul>
-
+                <ul class="workshop-list">
+                  <li>Diseñar arquitecturas de agentes inteligentes aplicadas a la ciberseguridad.</li>
+                  <li>Automatizar tareas como la investigación, el análisis y la generación de alertas de seguridad.</li>
+                  <li>Practicar con flujos completos donde múltiples agentes colaboran para resolver desafíos reales.</li>
+                  <li>Integrar plataformas de código abierto y privadas en soluciones escalables y funcionales.</li>
+                  <li>Utilizar entornos como Google Colab, Hugging Face y servicios en la nube como AWS.</li>
+                  <li>Explorar conceptos esenciales como agentes, memoria, planificación, colaboración y testing.</li>
+                </ul>
               <div class="section-title">
                 <span class="circle me-2"></span>
                 TEMARIO
@@ -481,12 +478,8 @@
                 PRE-REQUISITOS
               </div>
               <ul class="workshop-list">
-                <li>
-                  · Conocimientos básicos en Python es recomendable, pero no obligatorio.
-                </li>
-                <li>
-                  · Laptop con conexión a internet para poder realizar los ejercicios
-                </li>
+                <li>Conocimientos básicos en Python es recomendable, pero no obligatorio.</li>
+                <li>Laptop con conexión a internet para poder realizar los ejercicios.</li>
               </ul>
             </div>
           </div>
@@ -499,7 +492,7 @@
                   <div class="col-6 col-lg-12">
                     <div class="workshop-speaker-card-imgbox mb-3">
                       <img
-                        src="photos/salvadorMendoza.jpg"
+                        src="photos/salvadorMendoza.svg"
                         alt="Salvador Mendoza"
                         class="workshop-speaker-card-img"
                       />
@@ -514,7 +507,8 @@
                     <div class="workshop-speaker-card-role">
                       
                     </div>
-                    <div class="workshop-speaker-card-company">Director of Research Development - MetabaseQ</div>
+                    <div class="workshop-speaker-card-company">Director of Research Development <br> Batuta</div>
+                    
                     <div class="workshop-speaker-card-social mt-2">
                       <a href="https://x.com/Netxing" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
                       <!--<a href="#"><i class="zmdi zmdi-instagram"></i></a>-->
