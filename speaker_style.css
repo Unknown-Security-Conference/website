@@ -179,13 +179,13 @@
   border-color: #e74c3c;
 }
 .speaker-img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
   background: #f3f3f3;
-  object-fit: contain;
-  border: 20px solid #f3f3f3;
+  object-fit: cover;
+  border: 0px solid #f3f3f3;
 }
 .speaker-name {
   font-family: "Montserrat", sans-serif;
