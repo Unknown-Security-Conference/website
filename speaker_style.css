@@ -155,6 +155,12 @@
   will-change: transform;
   width: max-content;
 }
+.speakers-carousel-track2 {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  width: max-content;
+}
 .speaker-card {
   border: 1px solid var(--color-primary);
   border-radius: 18px;
@@ -345,6 +351,12 @@
 
 @media (max-width: 575px) {
   .speakers-carousel-track {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    justify-content: center;
+  }
+  .speakers-carousel-track2 {
     flex-direction: row !important;
     align-items: stretch !important;
     width: 100% !important;

@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".speakers-carousel-track");
+  const track = document.querySelector(".speakers-carousel-track2");
   const cards = Array.from(track.children);
-  const leftBtn = document.querySelector(".chevron-left");
-  const rightBtn = document.querySelector(".chevron-right");
+
+  const leftBtn = document.querySelector(".chevron-left2");
+  const rightBtn = document.querySelector(".chevron-right2");
 
   let currentIndex = 0;
   let cardsPerView = 4;
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Para mobile: índice de la card activa
   let mobileCurrent = 0;
 
-  function updateCardsPerView2() {
+  function updateCardsPerView() {
     if (window.innerWidth <= 575) {
       cardsPerView = 1;
     } else if (window.innerWidth < 768) {
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function updateCarousel2() {
+  function updateCarousel() {
     // Mobile: solo mostrar una card con .active
     if (window.innerWidth <= 575) {
       cards.forEach((card, idx) => {
@@ -55,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 575) {
       // Mobile: solo cambia la card activa
       mobileCurrent = (mobileCurrent - 1 + cards.length) % cards.length;
-      updateCarousel2();
+      updateCarousel();
     } else {
       currentIndex--;
-      updateCarousel2();
+      updateCarousel();
     }
   });
 
@@ -66,15 +67,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 575) {
       // Mobile: solo cambia la card activa
       mobileCurrent = (mobileCurrent + 1) % cards.length;
-      updateCarousel2();
+      updateCarousel();
     } else {
       currentIndex++;
-      updateCarousel2();
+      updateCarousel();
     }
   });
 
   window.addEventListener("resize", function () {
-    updateCardsPerView2();
+    updateCardsPerView();
     // Al cambiar de tamaño, sincroniza el índice de mobile y desktop
     if (window.innerWidth <= 575) {
       // Si venimos de desktop, muestra la primera card
@@ -83,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Si venimos de mobile, sincroniza el índice
       currentIndex = mobileCurrent;
     }
-    updateCarousel2();
+    updateCarousel();
   });
 
   // Inicialización
-  updateCardsPerView2();
-  updateCarousel2();
+  updateCardsPerView();
+  updateCarousel();
 });
