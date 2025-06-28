@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   });
 
-includeHTML("speakers", "/includes/speaker-carousel.html", () => {
+includeHTML("speakers", "/includes/speakers.html", () => {
   // Mezclar speaker-cards
   const track = document.querySelector(".speakers-carousel-track");
   if (track) {
