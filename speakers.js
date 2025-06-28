@@ -7,3 +7,5 @@ card.addEventListener('click', function (e) {
     }
 });
 });
+
+

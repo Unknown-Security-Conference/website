@@ -23,18 +23,17 @@
   gap: 40px;
 }
 .main-speaker-imgbox {
-  background: #e5e6e9;
+  background: #ffffff;
   border-radius: 12px;
   width: 100%;
   aspect-ratio: 1 / 0.7;
   display: flex;
-  align-items: center;
+  align-items: relative; /*###  seria flex-end*/
   justify-content: center;
   margin-bottom: 18px;
 }
 .main-speaker-img {
-  width: 150px;
-  height: 150px;
+
   object-fit: contain;
   border-radius: 0;
   background: none;
@@ -76,6 +75,7 @@
 }
 .main-speaker-desc {
   color: var(--color-primary);
+  text-align: justify;
   font-size: 0.98rem;
   line-height: 1.4;
   margin: 18px 0px;
@@ -96,16 +96,27 @@
   font-size: 1.6rem;
   color: var(--color-primary);
   font-weight: 400;
-  margin-bottom: 8px;
+  line-height: 1.6;
+  margin-bottom: 20 px;
   letter-spacing: 1px;
   text-align: center;
 }
 .main-speaker-card-desc {
   color: var(--color-primary);
+  
+  text-align: justify;
   font-size: 0.98rem;
   line-height: 1.4;
   margin: 15px 0;
-  text-align: center;
+ 
+}
+
+
+.main-speaker-card-desc ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 .main-speaker-card-details {
   font-size: 0.95rem;
@@ -215,7 +226,7 @@
   font-size: 1.25rem;
 }
 .speaker-social a:hover {
-  color: #e74c3c;
+  color: #bf1616;
 }
 .chevron {
   background: none;
@@ -227,7 +238,7 @@
   transition: color 0.2s;
 }
 .chevron:hover {
-  color: #e74c3c;
+  color: #bf1616;
 }
 
 .speakers-deco {
@@ -373,4 +384,25 @@
   .speaker-card.active {
     display: flex !important;
   }
+
+
+  .main-speaker-info {
+  flex-grow: 0;
+}
+
+.main-speaker-desc {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1e1e1e;
+  text-align: justify;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .main-speaker-section .row.align-items-stretch {
+    min-height: 100%;
+  }
+}
+
 }

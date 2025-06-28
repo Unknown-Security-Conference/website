@@ -418,6 +418,7 @@ ul li {
 /* slider */
 .header-slider-area {
   position: relative;
+  margin-top: 130px; /* o padding-top */
 }
 .nivo-caption {
   background: transparent none repeat scroll 0 0;
@@ -744,8 +745,8 @@ a.btn-def.bnt-2.big {
   margin-right: 15px;
 }
 .social-icon li a:hover {
-  background: #ff004d none repeat scroll 0 0;
-  border: 1px solid #ff004d;
+  background: rgb(191 22 22) none repeat scroll 0 0;
+  border: 1px solid rgb(191 22 22);
   color: #fff;
 }
 .single-speaker {
@@ -2569,4 +2570,112 @@ blockquote {
 .circular-image {
   border-radius: 50%;
   object-fit: cover;
+}
+
+
+/* === HEADER MENU FIXES === */
+
+/* Alinea todos los ítems del menú horizontalmente */
+.main-menu nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Evita que el botón se baje */
+.main-menu nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+/* Estiliza el botón sin romper el flujo */
+.sponsor-button {
+  padding: 10px 18px;
+  background-color: #4e5c77; /* o el color que uses */
+  color: #fff !important;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.sponsor-button:hover {
+  background-color: #2f3a4e;
+}
+
+/* En pantallas medianas o menores, centra el menú */
+@media (max-width: 991px) {
+  .main-menu nav ul {
+    justify-content: center;
+  }
+}
+
+/* Botón auspiciador en versión móvil */
+#dropdown li:last-child a {
+  display: inline-block;
+  background-color: #4e5c77;
+  color: white !important;
+  padding: 10px 18px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+#dropdown li:last-child a:hover {
+  background-color: #2f3a4e;
+}
+
+body.inner-page .slider-container,
+body.inner-page .countdown,
+body.inner-page .down-arrow {
+  display: none !important;
+}
+
+.header-area {
+  left: 0;
+  position: fixed;  /* ✅ Esto mantiene el header visible siempre */
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #0e1b30; /* Asegura fondo sólido */
+}
+
+
+#home-slider-section {
+  position: relative;
+  z-index: 100;
+}
+
+/* Sponsors horizontal row */
+.sponsor-logos-row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que se bajen si no hay espacio */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  overflow: hidden; /* Evita scroll */
+}
+
+.sponsor-card img {
+  max-height: 100px; /* Aumentado de 80px a 120px */
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card img:hover {
+  transform: scale(1.5);
 }
