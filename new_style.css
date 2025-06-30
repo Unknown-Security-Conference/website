@@ -998,7 +998,6 @@
 
 @media (max-width: 575px) {
   .sponsor-card {
-    display: none !important;
     width: 70vw;
     max-width: 70vw;
     min-width: 0;

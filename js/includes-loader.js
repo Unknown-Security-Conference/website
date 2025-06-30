@@ -20,7 +20,13 @@ function includeHTML(id, url, callback) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  includeHTML("header", "/includes/header.html");
+  includeHTML("header", "/includes/header.html", () => {
+    // Esto se ejecuta cuando el header ya está cargado
+    $("#dropdown").meanmenu({
+      meanScreenWidth: "768",
+      meanMenuContainer: ".mobile-menu-area",
+    });
+  });
   includeHTML("sponsors", "/includes/sponsors.html");
   includeHTML("main-footer", "/includes/footer.html", () => {
     // Cargar script de countdown después del footer
@@ -30,36 +36,36 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(script);
   });
 
-includeHTML("speakers", "/includes/speakers.html", () => {
-  // Mezclar speaker-cards
-  const track = document.querySelector(".speakers-carousel-track");
-  if (track) {
-    const cards = Array.from(track.children);
-    const shuffled = cards.sort(() => 0.5 - Math.random());
-    track.innerHTML = "";
-    shuffled.forEach(card => track.appendChild(card));
-  }
-
-  // Redirección
-  document.addEventListener("click", function (e) {
-    const card = e.target.closest(".speaker-card");
-    if (card?.dataset?.url) {
-      window.location.href = card.dataset.url;
+  includeHTML("speakers", "/includes/speakers.html", () => {
+    // Mezclar speaker-cards
+    const track = document.querySelector(".speakers-carousel-track");
+    if (track) {
+      const cards = Array.from(track.children);
+      const shuffled = cards.sort(() => 0.5 - Math.random());
+      track.innerHTML = "";
+      shuffled.forEach((card) => track.appendChild(card));
     }
-  });
 
-  // Scroll infinito simulado
-  const view = document.querySelector(".speakers-carousel-view");
-  const scrollAmount = 300;
+    // Redirección
+    document.addEventListener("click", function (e) {
+      const card = e.target.closest(".speaker-card");
+      if (card?.dataset?.url) {
+        window.location.href = card.dataset.url;
+      }
+    });
 
-  document.querySelector(".chevron-left")?.addEventListener("click", () => {
-    view.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  });
+    // Scroll infinito simulado
+    const view = document.querySelector(".speakers-carousel-view");
+    const scrollAmount = 300;
 
-  document.querySelector(".chevron-right")?.addEventListener("click", () => {
-    view.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    document.querySelector(".chevron-left")?.addEventListener("click", () => {
+      view.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    document.querySelector(".chevron-right")?.addEventListener("click", () => {
+      view.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
   });
-});
 
   // Lógica del carrusel horizontal
   const track = document.querySelector(".speakers-carousel-track");

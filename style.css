@@ -2572,7 +2572,6 @@ blockquote {
   object-fit: cover;
 }
 
-
 /* === HEADER MENU FIXES === */
 
 /* Alinea todos los ítems del menú horizontalmente */
@@ -2617,6 +2616,15 @@ blockquote {
   }
 }
 
+@media (max-width: 767px) {
+  .header-slider-area {
+    margin-top: 0px;
+  }
+  .mobile-menu-area {
+    display: block;
+  }
+}
+
 /* Botón auspiciador en versión móvil */
 #dropdown li:last-child a {
   display: inline-block;
@@ -2643,13 +2651,12 @@ body.inner-page .down-arrow {
 
 .header-area {
   left: 0;
-  position: fixed;  /* ✅ Esto mantiene el header visible siempre */
+  position: fixed; /* ✅ Esto mantiene el header visible siempre */
   top: 0;
   width: 100%;
   z-index: 9999;
   background-color: #0e1b30; /* Asegura fondo sólido */
 }
-
 
 #home-slider-section {
   position: relative;
@@ -2664,7 +2671,7 @@ body.inner-page .down-arrow {
   align-items: center;
   gap: 40px;
   padding: 40px 20px;
-  overflow: hidden; /* Evita scroll */
+  overflow: hidden;
 }
 
 .sponsor-card img {

@@ -8,7 +8,7 @@ const countdownElements = {
 };
 
 function animateUpdate(el, newVal) {
-  if (el.textContent !== newVal) {
+  if (el && el.textContent !== newVal) {
     el.classList.remove("fadeInDown");
     void el.offsetWidth;
     el.textContent = newVal;
