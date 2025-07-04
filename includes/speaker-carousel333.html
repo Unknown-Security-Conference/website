@@ -13,68 +13,68 @@
       name: "Salvador Mendoza",
       img: "speakers/salvadorMendoza.svg",
       role: "Director of Research Development - Batuta",
-      linkedin: "https://www.linkedin.com/in/salvador-mendoza-624a35a3/"
+      linkedin: "https://www.linkedin.com/in/salvador-mendoza-624a35a3/",
     },
     {
       name: "Jaime Restrepo",
       img: "speakers/jaimeRestrepo.svg",
       role: "CEO - Dragonjar",
-      linkedin: "https://www.linkedin.com/in/dragonjar/"
+      linkedin: "https://www.linkedin.com/in/dragonjar/",
     },
     {
       name: "Cesar Calderon",
       img: "speakers/cesarCalderon.svg",
       role: "Senior Security Consultant - Websec",
-      linkedin: "https://www.linkedin.com/in/stuxnet/"
+      linkedin: "https://www.linkedin.com/in/stuxnet/",
     },
-    {
+    /* {
       name: "Santiago Abastante",
       img: "speakers/santiAbastante.svg",
       role: "Senior Security Cloud Engineer - Solidarity Labs",
       linkedin: "https://www.linkedin.com/in/sabastante/"
-    },
+    }, */
     {
       name: "Piero Picasso",
       img: "speakers/pieroPicasso.svg",
       role: "Device Penetration Tester Leader - Cisco",
-      linkedin: "https://www.linkedin.com/in/piero-picasso/"
+      linkedin: "https://www.linkedin.com/in/piero-picasso/",
     },
     {
       name: "Erick Maldonado",
       img: "speakers/erickMaldonado.png",
       role: "Regional Offensive Security Leader - Red Spear Labs",
-      linkedin: "https://www.linkedin.com/in/erick-maldonado-55b529160/"
+      linkedin: "https://www.linkedin.com/in/erick-maldonado-55b529160/",
     },
     {
       name: "Gonzalo Nina",
       img: "speakers/gonzaloNina.png",
       role: "CTO - EHCGroup",
-      linkedin: "https://pa.linkedin.com/in/gonzalonina"
+      linkedin: "https://pa.linkedin.com/in/gonzalonina",
     },
     {
       name: "Hector Pardiñas",
       img: "speakers/chichePardinas.png",
       role: "CEO - Toxo SAS",
-      linkedin: "https://www.linkedin.com/in/hector-pardi%C3%B1as-40301460/"
+      linkedin: "https://www.linkedin.com/in/hector-pardi%C3%B1as-40301460/",
     },
     {
       name: "Romel Marin",
       img: "speakers/romelMarin.png",
       role: "Pentester Senior - IBM X-Force Red",
-      linkedin: "https://www.linkedin.com/in/romel-marin-812489113/"
+      linkedin: "https://www.linkedin.com/in/romel-marin-812489113/",
     },
     {
       name: "Rafael Bucio",
       img: "speakers/rafaelBucio.svg",
       role: "Chief on Board - Tpx Security",
-      linkedin: "https://www.linkedin.com/in/bucio/"
+      linkedin: "https://www.linkedin.com/in/bucio/",
     },
     {
       name: "Mauricio Jara",
       img: "speakers/mauricioJara.svg",
       role: "Deception Infrastructure Engineer - Eclypsium Inc",
-      linkedin: "https://www.linkedin.com/in/osxmdsx/"
-    }
+      linkedin: "https://www.linkedin.com/in/osxmdsx/",
+    },
   ];
 
   function shuffleArray(array) {
@@ -89,7 +89,8 @@
     const container = document.getElementById("speaker-list");
     container.innerHTML = "";
     speakers.forEach((s, index) => {
-      const colClass = "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-4";
+      const colClass =
+        "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-4";
       const card = document.createElement("div");
       card.className = colClass;
       card.innerHTML = `
@@ -113,4 +114,3 @@
 
 <!-- Asegúrate de que jQuery esté incluido si se usa en otras partes del sitio -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
